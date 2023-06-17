@@ -1,0 +1,63 @@
+.preview {
+  position: relative;
+  margin-inline: auto;
+  width: 251px;
+  height: 403px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+.preview > img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.preview__close {
+  position: absolute;
+  top: 0;
+  margin: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.preview__toolbarRight {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  margin: 5px;
+  gap: 10px;
+}
+.preview__toolbarRight > .MuiSvgIcon-root {
+  color: #fff;
+  cursor: pointer;
+  font-size: 22px !important;
+}
+
+@media (max-width: 600px) {
+  .preview__close {
+    color: #1b1b1b !important;
+  }
+  .preview__toolbarRight > .MuiSvgIcon-root {
+    color: #1b1b1b !important;
+  }
+}
+.preview__footer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px;
+  padding-inline: 10px;
+  border-radius: 30px;
+  position: absolute;
+  background-color: yellow;
+  cursor: pointer;
+  bottom: 10px;
+  right: 5px;
+}
+.preview__footer > h4 {
+  font-size: 11px;
+}
+.preview__send {
+  font-size: 13px !important;
+}

@@ -1,0 +1,20 @@
+.webcamComponent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.webcamComponent__capture {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .webcamComponent__capture {
+    color: #1b1b1b !important;
+    font-size: 40px !important;
+  }
+}

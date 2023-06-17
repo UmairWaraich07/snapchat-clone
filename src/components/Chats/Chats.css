@@ -1,0 +1,120 @@
+.chats {
+  position: relative;
+  width: 250px;
+  height: 400px;
+}
+
+.chats__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #059ee0;
+  padding-inline: 8px;
+  gap: 8px;
+}
+.chats__header .MuiSvgIcon-root {
+  color: #fff !important;
+  font-size: 20px !important;
+}
+.chats__search {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.chats__avatar {
+  width: 25px !important;
+  height: 25px !important;
+  cursor: pointer;
+}
+
+.chats__search > input {
+  width: 90%;
+  font-size: 14px;
+  outline-width: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.chats__search > input::placeholder {
+  color: #fff;
+}
+.chats__posts {
+  margin-top: -9px;
+  background-color: #fff;
+  height: 359px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 1px -7px 7px -6px rgba(0, 0, 0, 0.44);
+  overflow: scroll;
+}
+.chats__radio {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 99;
+  color: gray;
+  background-color: white;
+  border-radius: 200px;
+}
+.chats__radio:hover {
+  opacity: 0.8;
+}
+
+.chats__posts::-webkit-scrollbar {
+  display: none;
+}
+
+/* hides scrollbar for IE, edge and firefox */
+.chats__posts {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tooltip {
+  position: relative;
+}
+
+/* Tooltip box */
+.tooltip:before {
+  content: attr(title);
+  position: absolute;
+  width: 100px;
+  background-color: #062b45;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.2;
+  border-radius: 6px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.1s;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 0.75em;
+  visibility: hidden;
+}
+
+/* Tooltip arrow */
+.tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  opacity: 0;
+  transition: opacity 0.1s;
+  border-color: #062b45 transparent transparent transparent;
+  visibility: hidden;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
